@@ -397,13 +397,13 @@ We will also accept implementations written in C, however use of C++ is preferre
     <p><strong>If you need additional dependencies for your project, you must update Vagrant file.</strong></p>
   </li>
   <li>
-    <p>All your source code, <code class="highlighter-rouge">Makefile</code>, <code class="highlighter-rouge">README.md</code>, <code class="highlighter-rouge">Vagrantfile</code>, and <code class="highlighter-rouge">.git</code> folder with your git repository history as a <code class="highlighter-rouge">.tar.gz</code> archive (and any files from extra credit part).</p>
+    <p>All your source code, <code class="highlighter-rouge">Makefile</code>, <code class="highlighter-rouge">README.md</code>, <code class="highlighter-rouge">Vagrantfile</code>, and <code class="highlighter-rouge">.git</code> folder with your git repository history as a <code class="highlighter-rouge">.zip</code> archive.</p>
 
     <p>To create the submission, <strong>use the provided Makefile</strong> in the skeleton project.  Just update <code class="highlighter-rouge">Makefile</code> to include your NUID and then just type</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> make tarball
+   <!-- <div class="highlighter-rouge"><pre class="highlight"><code> make tarball
 </code></pre>
-    </div>
+    </div>-->
 
    <!-- <p>Then submit the resulting archive to Gradescope.</p>-->
   </li>
@@ -414,7 +414,7 @@ We will also accept implementations written in C, however use of C++ is preferre
 <ol>
   <li>Your code compiles</li>
   <li>Client and server conforms to the specification</li>
-  <li><code class="highlighter-rouge">.tar.gz</code> archive does not contain temporary or other unnecessary files.  We will automatically deduct points otherwise.</li>
+  <li><code class="highlighter-rouge">.zip</code> archive does not contain temporary or other unnecessary files.  We will automatically deduct points otherwise.</li>
 </ol>
 
 <p class="bs-callout bs-callout-danger">Submissions that do not follow these requirements will not get any credit.</p>
@@ -434,20 +434,20 @@ We will also accept implementations written in C, however use of C++ is preferre
   <li>(2.5 pts) Client handles incorrect hostname/port</li>
   <li>(2.5 pts) Server handles incorrect port</li>
   <li>(2.5 pts) Server handles <code class="highlighter-rouge">SIGTERM</code> / <code class="highlighter-rouge">SIGQUIT</code> signals</li>
-  <li>(5 pts) Client connects and starts transmitting a file</li>
-  <li>(5 pts) Server accepts a connection and start saving a file</li>
-  <li>(5 pts) Client able to successfully transmit a small file (500 bytes)</li>
-  <li>(5 pts) Client able to successfully transmit a medium size file (1 MiB)
+  <li>(5 pts) Client connects and starts transmitting a small file(500 bytes)</li>
+  <li>(5 pts) Server accepts a connection and start saving  a small file (500 bytes) and save it in <code class="highlighter-rouge">1.file</code></li>
+ <!-- <li>(5 pts) Client able to successfully transmit a small file (500 bytes)</li>-->
+  <li>(10 pts) Client able to successfully transmit a medium size file (1 MiB)
     <ul>
       <li>sending in large chunks without delays</li>
     </ul>
   </li>
-  <li>(5 pts) Client able to successfully transmit a large size file (100 MiB)
+  <li>(10 pts) Client able to successfully transmit a large size file (100 MiB)
     <ul>
       <li>sending in large chunks without delays</li>
     </ul>
   </li>
-  <li>(5 pts) Server able to receive a small file (500 bytes) and save it in <code class="highlighter-rouge">1.file</code></li>
+  <!--<li>(5 pts) Server able to receive a small file (500 bytes) and save it in <code class="highlighter-rouge">1.file</code></li>-->
   <li>(15 pts) Server able to receive a medium file (1 MiB bytes) and save it in <code class="highlighter-rouge">1.file</code>
     <ul>
       <li>(5 pts) receiving file sent in large chunks without delays</li>
